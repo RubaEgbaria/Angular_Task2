@@ -1,0 +1,16 @@
+#border {
+    display: inline-block;
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid darkslategray;
+    background-color: whitesmoke;
+    max-width: 130px;
+}
+#border2 {
+    display: inline-block;
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid darkslategray;
+    background-color: darkslategray;
+    color: aliceblue ; 
+}

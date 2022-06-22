@@ -1,0 +1,23 @@
+<div id='border' >
+     ID : {{ client.id }} <br>
+    Initials : {{ client.initials }} <br>
+    Description : {{client.description }}<br> <br>
+
+    <ng-container [ngSwitch]="more">
+    <div *ngSwitchCase="'true'">
+        <p [ngSwitch]="client.status">
+            <span *ngSwitchCase="'0'">
+                Status : Deleted </span>
+            <span *ngSwitchCase="'1'">
+         Status : Activeted  </span>
+         <span *ngSwitchCase="'2'">
+            Status : Deactiveted </span>
+         </p>
+        Sector : {{ client.sector }} <br>
+        </div>
+        <div *ngSwitchCase="'false'">
+          </div>
+    </ng-container>
+
+    <button (click)="viewmore()"> {{ button_name }}</button>
+</div>

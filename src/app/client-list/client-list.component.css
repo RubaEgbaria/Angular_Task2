@@ -1,0 +1,7 @@
+#border {
+        margin: 10px;
+        padding: 30px;
+        border: 2px solid darkslategray;
+        background-color: powderblue;
+        max-width: 220px;
+}

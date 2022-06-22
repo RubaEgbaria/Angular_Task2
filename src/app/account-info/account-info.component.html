@@ -1,0 +1,34 @@
+<p>account-info works!</p>
+<!-- 	id: number;
+	clientName: string;
+	description: string;
+	legalEntity: string;
+ -->
+<div style='border-style:dotted' style=" background-color: darkslategray" >
+	<div id="border2">
+<p> Account Id : {{account.id }} </p>
+<p> Account Client Name : {{account.clientName }} </p>
+<p> Account Description : {{account.description }} </p>
+<p> Account Legal Entity : {{account.legalEntity }} </p>
+
+<button class='btn btn-dark'(click)="addressfunc()"> Address  </button>
+<button  class='btn btn-primary' (click)="dept()"> Department   </button>
+<button class='btn btn-warning'(click)="cont()"> Contact    </button>
+</div>
+ <br> <br> 
+<ng-container [ngSwitch]="calling">
+<div id='border' *ngSwitchCase="'addressCalled'">
+	{{ account.address  | json }}
+</div>
+<div *ngSwitchCase="'deptCalled'">
+	<ng-template ngFor let-item [ngForOf]="account.departments">  <!-- </ng-template> #name *ngFor="let i in account.departments">  -->
+	<p id="border">{{  item  | json }}</p>
+	</ng-template>
+</div>
+<div *ngSwitchCase="'contCalled'">
+	<ng-template ngFor let-item [ngForOf]="account.contacts"> 	
+ <p id='border'> {{ item | json }} </p>
+ </ng-template>
+</div>
+</ng-container>
+</div>
