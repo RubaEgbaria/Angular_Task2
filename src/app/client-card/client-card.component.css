@@ -1,9 +1,9 @@
 #border {
-    display: inline-block;
-
-    margin: 10px;
-    padding: 30px;
+    display: inline-table;
+    
+    margin: 15px;
+    padding: 36px;
     border: 2px solid darkslategray;
     background-color: whitesmoke;
-    max-width: 150px;
+    /* max-width: 150px; */
 }

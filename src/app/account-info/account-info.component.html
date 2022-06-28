@@ -15,20 +15,69 @@
 <button  class='btn btn-primary' (click)="dept()"> Department   </button>
 <button class='btn btn-warning'(click)="cont()"> Contact    </button>
 </div>
- <br> <br> 
+ <br> <br>
 <ng-container [ngSwitch]="calling">
-<div id='border' *ngSwitchCase="'addressCalled'">
-	{{ account.address  | json }}
+<div id="border2" *ngSwitchCase="'addressCalled'">
+<table>
+  <tr>
+      <th> ID </th>
+      <th> City </th>
+      <th> Country </th>
+      <th> Buliding Ref </th>
+      <th> Fax Number </th>
+      <th> Mobile Number </th>
+
+  </tr>
+    <tr>
+      <td> {{ account.address.id  | json }}</td>
+      <td> {{ account.address.city  | json }}</td>
+      <td> {{ account.address.country  | json }}</td>
+      <td> {{ account.address.buildingRef  | json }}</td>
+      <td> {{ account.address.faxNo  | json }}</td>
+      <td> {{ account.address.mobileNo  | json }}</td>
+
+    </tr>
+</table>
+	<!-- {{ account.address  | json }} -->
 </div>
-<div *ngSwitchCase="'deptCalled'">
+<div id='border2' *ngSwitchCase="'deptCalled'">
+  <table>
+    <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Classification </th>
+    </tr>
 	<ng-template ngFor let-item [ngForOf]="account.departments">  <!-- </ng-template> #name *ngFor="let i in account.departments">  -->
-	<p id="border">{{  item  | json }}</p>
-	</ng-template>
+	<!-- <p id="border">{{  item  | json }}</p> -->
+      <tr>
+        <td> {{ item.id  | json }}</td>
+        <td> {{ item.name  | json }}</td>
+        <td> {{ item.classification  | json }}</td>
+      </tr>
+    </ng-template>
+  </table>
+
 </div>
-<div *ngSwitchCase="'contCalled'">
-	<ng-template ngFor let-item [ngForOf]="account.contacts"> 	
- <p id='border'> {{ item | json }} </p>
- </ng-template>
+<div id='border2' *ngSwitchCase="'contCalled'">
+  <table>
+    <tr>
+        <th> ID </th>
+        <th> Title </th>
+        <th> Name </th>
+        <th> Position </th>
+
+    </tr>
+	<ng-template ngFor let-item [ngForOf]="account.contacts">
+ <!-- <p id='border'> {{ item | json }} </p> -->
+ <tr>
+  <td> {{ item.id  | json }}</td>
+  <td> {{ item.title  | json }}</td>
+  <td> {{ item.name  | json }}</td>
+  <td> {{ item.position  | json }}</td>
+
+</tr>
+</ng-template>
+</table>
 </div>
 </ng-container>
 </div>

@@ -13,7 +13,7 @@ export interface Address {
 	city: string;
 	country: string;
 	buildingRef: string;
-	faxNo: string;  
+	faxNo: string;
 	mobileNo: string;
 }
 

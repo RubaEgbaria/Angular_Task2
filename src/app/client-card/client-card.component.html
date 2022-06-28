@@ -1,23 +1,38 @@
-<div id='border' >
+ <div id='border' >
      ID : {{ client.id }} <br>
     Initials : {{ client.initials }} <br>
-    Description : {{client.description }}<br> <br>
+    Description : {{client.description }}<br>
 
     <ng-container [ngSwitch]="more">
     <div *ngSwitchCase="'true'">
-        <p [ngSwitch]="client.status">
-            <span *ngSwitchCase="'0'">
-                Status : Deleted </span>
-            <span *ngSwitchCase="'1'">
-         Status : Activeted  </span>
-         <span *ngSwitchCase="'2'">
-            Status : Deactiveted </span>
-         </p>
-        Sector : {{ client.sector }} <br>
-        </div>
-        <div *ngSwitchCase="'false'">
-          </div>
+        <span [ngSwitch]="client.status">
+            <span *ngSwitchCase="'0'">   Status : Deleted </span>
+            <span *ngSwitchCase="'1'">   Status : Activeted  </span>
+            <span *ngSwitchCase="'2'">   Status : Deactiveted </span> </span> <br>
+         Sector : {{ client.sector }}   </div>
+        <div *ngSwitchCase="'false'">   </div>
     </ng-container>
+            <button (click)="viewmore()"> {{ button_name }}</button>
+</div> 
 
-    <button (click)="viewmore()"> {{ button_name }}</button>
-</div>
+
+<!--  tried to do it as a table ..  -->
+<!-- <div class="container mt-3">
+   <table class="table table-striped">
+        <thead>
+    <tr>
+        <th> ID</th>
+        <th> Initials </th>
+        <th> Description </th>
+    </tr> 
+ </thead>
+    <tbody>
+    <tr>
+        <td> {{ client.id }}</td>
+        <td> {{ client.initials }}</td>
+        <td> {{ client.description }}</td>
+        <button (click)="viewmore()"> {{ button_name }}</button>
+    </tr>  
+    </tbody>
+</table>
+    </div> -->

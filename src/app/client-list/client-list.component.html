@@ -1,8 +1,31 @@
-<p>client-list works!</p>
+<!-- <p>client-list works!</p>
 
-<!-- <p>  {{ client | json }}</p> -->
-<div style=" background-color: darkslategray">
-<app-client-card *ngFor='let client of clients' [client]="client"></app-client-card>
+<p>  {{ client | json }}</p> 
+<div class="container mt-3">
+    <table class="table table-striped">
+         <thead>
+     <tr>
+         <th> ID</th>
+         <th> Initials </th>
+         <th> Description </th>
+     </tr> 
+  </thead>
+     <tbody>
+     <tr>
+         <td> {{ client.id }}</td>
+         <td> {{ client.initials }}</td>
+         <td> {{ client.description }}</td>
+         <button (click)="viewmore()"> {{ button_name }}</button> 
+        </tr>  
+    </tbody>
+    </table>
+    </div> -->
+<div     style="background-color: darkslategray;"
+>
+<!-- style=" background-color: darkslategray" -->
+<app-client-card *ngFor='let client of clients' [client]="client">
+
+</app-client-card>
 
 <!-- *ngFor='let address of address1' -->
 </div>
