@@ -1,8 +1,8 @@
-<h1> Task 2 <h1>
+<h1> Task 2 </h1>
 
-<h3> Directives <h3>
+<h3> Directives </h3>
 
-<h3>Part 1: <h3>
+<h3>Part 1: </h3>
 
 <ul>
 <li>Create a component called ClientList, this component will display a list of clients.</li>
@@ -13,7 +13,7 @@ should be displayed as ‘view less’, and upon click, should hide the info.</l
 <li>A client’s status is a numerical value, it can be 0, 1 or 2. 0 means deleted, 1 means active, and 2 means inactive.</li>
 </ul>
 
-<h3>Part 2: <h3>
+<h3>Part 2: </h3>
 <ul>
 <li>Create a component called AccountInfo, in which you will display the account information.</li>
 <li>This component will also have 3 tabs: Main Address, Departments and Contacts.</li>
