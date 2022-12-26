@@ -1,27 +1,26 @@
-# Task2
+<h1> Task 2 <h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+<h3> Directives <h3>
 
-## Development server
+<h3>Part 1: <h3>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<ul>
+<li>Create a component called ClientList, this component will display a list of clients.</li>
+<li>Create a component called ClientCard, in which you should display the main client information.</li>
+<li>In the ClientCard component, add a ‘view more’ button to view the rest of the client’s fields.</li>
+<li>When all of the client’s information is shown, the ‘view more’ button 
+should be displayed as ‘view less’, and upon click, should hide the info.</li>
+<li>A client’s status is a numerical value, it can be 0, 1 or 2. 0 means deleted, 1 means active, and 2 means inactive.</li>
+</ul>
 
-## Code scaffolding
+<h3>Part 2: <h3>
+<ul>
+<li>Create a component called AccountInfo, in which you will display the account information.</li>
+<li>This component will also have 3 tabs: Main Address, Departments and Contacts.</li>
+<li>When you click on each tab, the corresponding information will be shown.</li>
+</ul>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h3>Part 3:</h3>
+<ul>
+<li>Rewrite the NgIf directive.</li>
+</ul>
